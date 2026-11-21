@@ -5,7 +5,8 @@ targetSdk = "37"
 javaVersion = "21"
 
 ksp = "2.3.10"
-kotlin-serialization = "1.11.0"
+kotlin-serialization = "1.13.0"
+hilt = "2.60.1"
 
 agp = "9.4.1"
 coreKtx = "1.10.1"
@@ -47,9 +48,14 @@ room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 # Serialization
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlin-serialization" }
 
+# Hilt
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
