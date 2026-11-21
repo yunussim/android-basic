@@ -30,6 +30,9 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
 
+    //json
+    implementation(libs.kotlinx.serialization.json)
+
     //db: room
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
