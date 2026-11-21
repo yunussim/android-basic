@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class ProductBackupDto(
+internal data class ProductBackupDto(
     @SerialName("id")
     val id: Long = 0,
     @SerialName("name")
