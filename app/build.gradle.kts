@@ -6,13 +6,13 @@ plugins {
 android {
     namespace = "com.gmail.yunussimulya.basicandroid"
     compileSdk {
-        version = release(37)
+        version = release(libs.versions.compileSdk.get().toInt())
     }
 
     defaultConfig {
         applicationId = "com.gmail.yunussimulya.basicandroid"
-        minSdk = 26
-        targetSdk = 37
+        minSdk = libs.versions.minSdk.get().toInt()
+        targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = 1
         versionName = "1.0"
 
@@ -27,9 +27,10 @@ android {
             }
         }
     }
+    val javaVersion = JavaVersion.toVersion(libs.versions.javaVersion.get())
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = javaVersion
+        targetCompatibility = javaVersion
     }
     buildFeatures {
         compose = true
