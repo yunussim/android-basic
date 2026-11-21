@@ -6,8 +6,14 @@ import com.gmail.yunussimulya.core.data.local.AppDatabase
 import com.gmail.yunussimulya.core.data.local.dao.ProductDao
 import com.gmail.yunussimulya.core.data.repository.ProductRepositoryImpl
 import com.gmail.yunussimulya.core.model.repository.ProductRepository
+import dagger.Binds
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
 
-/*
 @Module
 @InstallIn(SingletonComponent::class)
 internal object DatabaseModule {
@@ -37,4 +43,3 @@ internal abstract class DataModule {
         impl: ProductRepositoryImpl
     ): ProductRepository
 }
- */

@@ -5,8 +5,9 @@ import com.gmail.yunussimulya.core.data.mapper.toEntity
 import com.gmail.yunussimulya.core.model.entity.Product
 import com.gmail.yunussimulya.core.model.repository.ProductRepository
 import kotlinx.coroutines.flow.Flow
+import javax.inject.Inject
 
-internal class ProductRepositoryImpl constructor(
+internal class ProductRepositoryImpl @Inject constructor(
     private val productDao: ProductDao
 ) : ProductRepository {
 
